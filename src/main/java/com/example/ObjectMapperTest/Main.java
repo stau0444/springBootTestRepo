@@ -51,8 +51,7 @@ public class Main {
         JsonNode jsonNode = objectMapper.readTree(jsonUser);
         String _name = jsonNode.get("name").asText();
         int _age = jsonNode.get("age").asInt();
-        System.out.println("name:"+_name);
-        System.out.println("age:"+_age);
+
 
 
         //User에 List<Car>는 array 타입이기 때문에 형변환이 필요

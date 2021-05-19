@@ -34,6 +34,7 @@ public class ValidationApiController {
     //@Valid를 달아줘야한다.
     //컨트롤러에 들어와서 파라미터에 @Valid가 있다면 검증을 들어간다.
     public ResponseEntity user2(@Valid @RequestBody User2 user, BindingResult bindingResult){
+        //bindingResult 에는 에러와 모델에 관한 정보가 들어 있다.
         if(bindingResult.hasErrors()){
             StringBuilder sb = new StringBuilder();
             bindingResult.getAllErrors().forEach(objectError -> {

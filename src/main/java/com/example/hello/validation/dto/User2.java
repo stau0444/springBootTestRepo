@@ -1,5 +1,7 @@
 package com.example.hello.validation.dto;
 
+import com.example.hello.validation.annotation.Nickname;
+
 import javax.validation.Valid;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
@@ -9,6 +11,9 @@ public class User2 {
 
     @NotBlank
     private String name;
+
+    @Nickname(pattern = "^[0-9]*$")
+    private String nickname;
 
     @Max(value = 90)
     private int age;
@@ -42,10 +47,19 @@ public class User2 {
         this.cars = cars;
     }
 
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
     @Override
     public String toString() {
         return "User2{" +
                 "name='" + name + '\'' +
+                ", nickname='" + nickname + '\'' +
                 ", age=" + age +
                 ", cars=" + cars +
                 '}';

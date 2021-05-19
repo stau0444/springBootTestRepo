@@ -1,10 +1,9 @@
 package com.example.hello.validation.dto;
 
+import com.example.hello.validation.annotation.Nickname;
 import com.example.hello.validation.annotation.YearMonth;
 
 import javax.validation.constraints.*;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class User {
@@ -14,7 +13,6 @@ public class User {
 
     @Max(value = 90)
     private int age;
-
 
     @Email
     private String email;
@@ -80,6 +78,7 @@ public class User {
 //    public boolean isReqYearMonthValidation(){
 //
 //    }
+
 
 
     @Override

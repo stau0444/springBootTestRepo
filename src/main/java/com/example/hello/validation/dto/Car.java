@@ -3,6 +3,7 @@ package com.example.hello.validation.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 
 public class Car {
 

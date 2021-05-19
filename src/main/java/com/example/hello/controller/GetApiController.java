@@ -1,6 +1,7 @@
 package com.example.hello.controller;
 
 import com.example.hello.Dto.UserDto;
+import com.example.hello.Dto.UserDto2;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -39,10 +40,16 @@ public class GetApiController {
     //읽어 해당 객체의 필드와 매칭을 시켜준다
     //쿼리 스트링에 
     @GetMapping("/query-param03")
-    public String queryParam03(UserDto userDto){
+    public String queryParam03(UserDto userDto, UserDto2 uSerDto2){
         System.out.println(userDto.getName());
         System.out.println(userDto.getEmail());
         System.out.println(userDto.getAge());
+
+        System.out.println("--------------UserDto2----------");
+
+        System.out.println(uSerDto2.getName());
+        System.out.println(uSerDto2.getEmail());
+        System.out.println(uSerDto2.getAge());
         return userDto.toString();
     }
 }
