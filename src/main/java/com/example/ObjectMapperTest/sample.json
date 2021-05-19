@@ -1,0 +1,16 @@
+{
+  "name":"ugo",
+  "age":20,
+  "cars":[
+    {
+      "name":"K5",
+      "car_num":"14고 1233",
+      "TYPE":"sedan"
+    },
+    {
+      "name":"sorento",
+      "car_num":"22고 2222",
+      "TYPE":"suv"
+    }
+  ]
+}

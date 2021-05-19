@@ -30,5 +30,10 @@ class HelloApplicationTests {
         //text -> objectMapper로 바뀔 경우 default 생성자가 필요하다.
         var objectUser = objectMapper.readValue(text,ObjectMapperUser.class);
         System.out.println(objectUser);
+
+
+        //ObjectMapper를 통해 Jason node에 접근하는 방법
+
+
     }
 }
