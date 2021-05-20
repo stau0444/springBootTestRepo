@@ -11,7 +11,7 @@ public class User {
     @Size(min = 1,max = 10)
     private String name;
 
-    @Min(1)
+    @Min(value = 1)
     @NotNull
     private Integer age;
 
