@@ -1,6 +1,7 @@
 package com.example.hello.exception.controller;
 
 import com.example.hello.exception.dto.User;
+import com.example.hello.interceptorWithException.exception.NoAuthException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +18,11 @@ import javax.validation.constraints.Size;
 @RequestMapping("/api/user")
 @Validated
 public class ExceptionController {
+
+    @GetMapping("/test")
+    public void AuthTest(){
+        throw new NoAuthException("NoAuth 터짐");
+    }
 
     @GetMapping
     //@RequestParam의 required 옵션이 false면 null이어도 동작은 하도록한다.

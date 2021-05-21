@@ -72,7 +72,7 @@ public class AuthInterceptor implements HandlerInterceptor {
         Method method = handlerMethod.getMethod();
         String name = method.getName();
         log.info("name:{}", name);
-        //Auth annotation 을 가지고 있는지 없는지 확인
+        //Auth1 annotation 을 가지고 있는지 없는지 확인
         if(null != handlerMethod.getMethodAnnotation(clazz) || null != handlerMethod.getBeanType().getAnnotation(clazz)){
             return true;
         }

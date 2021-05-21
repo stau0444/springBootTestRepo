@@ -3,6 +3,7 @@ package com.example.hello.exception.advice;
 import com.example.hello.exception.controller.ExceptionController;
 import com.example.hello.exception.dto.Error;
 import com.example.hello.exception.dto.ErrorResponse;
+import com.example.hello.interceptorWithException.exception.NoAuthException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -100,6 +101,8 @@ public class GlobalControllerAdvice {
 
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
     }
+
+
 
     @ExceptionHandler(value = MissingServletRequestParameterException.class)
     public ResponseEntity MissingServletRequestParameterException(MissingServletRequestParameterException e , HttpServletRequest request){
